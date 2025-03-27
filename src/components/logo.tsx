@@ -1,32 +1,32 @@
-import clsx from "clsx";
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
 
+interface LogoProps {
+  className?: string; // Optional className prop
+}
 
-export default function Logo({ className }: { className?: string }) {
+export default function Logo({ className }: LogoProps) {
   return (
-    <Link href={"/"} title="Home">
-      <div className="flex items-center space-x-4">
-                <Link href="/" className="flex items-center">
-                  <Image
-                    src="/images/logo/logo_web.png"
-                    alt="Logo"
-                    width={40} // Adjust width as needed for responsive sizing
-                    height={40}
-                    className="w-10 h-10" // Tailwind sizing for better control on smaller screens
-                    unoptimized
-                  />
-                  <span className="ml-3 text-2xl sm:text-3xl font-semibold text-[#077998]">
-                   DEV
-                  </span>
-                  <span className="ml-3 text-2xl sm:text-3xl font-semibold text-[#8A1D4F]">
-                    BLOGS
-                  </span>
-                </Link>
-              </div>
-      
-        
+    <Link href="/" title="Home">
+      <div className={`flex items-center space-x-4 ${className || ""}`}>
+        <Image
+          src="/images/logo/logo_web.png"
+          alt="Logo"
+          width={40} // Adjust width for responsive design
+          height={40}
+          className="w-10 h-10" // Tailwind classes for sizing
+          unoptimized
+        />
+        <div className="flex">
+          <span className="ml-3 text-2xl sm:text-3xl font-semibold text-[#077998]">
+            DEV
+          </span>
+          <span className="ml-1 text-2xl sm:text-3xl font-semibold text-[#8A1D4F]">
+            BLOGS
+          </span>
+        </div>
+      </div>
     </Link>
   );
 }
