@@ -14,9 +14,12 @@ const products: ProductType[] = [
     section: "Menu",
     link: [
       { name: "Home", href: "/" },
-      { name: "Agency", href: "https://dev-champions.tech/" }, // Updated Blog link
+      { name: "Agency", href: "https://dev-champions.tech/" },
       { name: "Jobs", href: "https://dev-champions.tech/jobs" },
-      { name: "Contact", href: "https://api.whatsapp.com/send/?phone=+2349115034504&text=Feel%20free%20to%20email%20us%20at%20info%40dev-champions.tech%20too" },
+      {
+        name: "Contact",
+        href: "https://api.whatsapp.com/send/?phone=+2349115034504&text=Feel%20free%20to%20email%20us%20at%20info%40dev-champions.tech%20too",
+      },
     ],
   },
   {
@@ -51,14 +54,32 @@ const products: ProductType[] = [
 
 export default function Footer() {
   return (
-    <div className="bg-black  z-20" id="first-section">
+    <div className="bg-black z-20" id="first-section">
       <div className="mx-auto max-w-2xl pt-40 pb-16 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+        {/* Marquee Section */}
+        <div className="overflow-hidden whitespace-nowrap">
+          <div className="inline-block animate-marquee">
+            <span className="text-white text-lg font-bold px-4">
+              Looking for top-notch services? Dev Champions offers Web Development, AI Solutions, Data Analytics, E-commerce Platform Development, IT Tutorials, and Custom Web Design. Visit{" "}
+              <Link
+                href="https://dev-champions.tech"
+                className="text-orange-500 underline"
+              >
+                Dev Champions
+              </Link>{" "}
+              for innovative solutions tailored to your needs!
+            </span>
+          </div>
+        </div>
+
         <div className="mt-24 grid grid-cols-1 gap-y-10 gap-x-16 sm:grid-cols-2 lg:grid-cols-12 xl:gap-x-8">
-          
           {/* COLUMN-1 */}
           <div className="col-span-4">
             <div className="flex items-center space-x-4">
-              <Link href="/" className="flex items-center leading-9 mb-4 lg:mb-20">
+              <Link
+                href="/"
+                className="flex items-center leading-9 mb-4 lg:mb-20"
+              >
                 <Image
                   src="/images/logo/logo_web_white.png"
                   alt="Logo"
@@ -128,7 +149,9 @@ export default function Footer() {
           {/* COLUMN-2/3 */}
           {products.map((product) => (
             <div key={product.id} className="group relative col-span-2">
-              <p className="text-white text-xl font-extrabold mb-9">{product.section}</p>
+              <p className="text-white text-xl font-extrabold mb-9">
+                {product.section}
+              </p>
               <ul>
                 {product.link.map((item, index) => (
                   <li key={index} className="mb-5">
@@ -150,7 +173,12 @@ export default function Footer() {
       {/* All Rights Reserved */}
       <div className="mx-auto max-w-2xl lg:max-w-7xl">
         <div className="pt-5 pb-5 px-4 sm:px-6 lg:px-4 border-solid border-t border-footer">
+        <p className="text-white">
+        Loved our content? Leave us a review on
+        <Link href="https://g.page/dev-champions/review" className="text-yellow-500 underline"> Google</Link>.
+      </p>
           <div className="mt-4 grid grid-cols-1 gap-y-10 gap-x-16 sm:grid-cols-2 xl:gap-x-8">
+            
             <div>
               <h3 className="text-center md:text-start text-white text-lg">
                 Dev Champions IT &copy; 2024 - All Rights Reserved
@@ -166,11 +194,10 @@ export default function Footer() {
                 </h3>
               </Link>
             </div>
+      
           </div>
         </div>
       </div>
     </div>
   );
-};
-
-
+}

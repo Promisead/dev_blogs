@@ -62,6 +62,30 @@ export default async function FeaturedPosts() {
           </div>
         ))}
       </div>
+       {/* Marquee Section */}
+<div className="overflow-hidden whitespace-nowrap mt-10">
+  <div className="inline-block animate-marquee">
+    <span className="text-lg font-bold px-4">
+      <span className="text-[#077998]">Looking for top-notch services?</span>{" "}
+      <span className="text-[#8A1D4F]">Dev Champions</span> offers{" "}
+      <span className="text-[#077998]">Web Development</span>,{" "}
+      <span className="text-[#8A1D4F]">AI Solutions</span>,{" "}
+      <span className="text-[#077998]">Data Analytics</span>,{" "}
+      <span className="text-[#8A1D4F]">E-commerce Platform Development</span>,{" "}
+      <span className="text-[#077998]">IT Tutorials</span>, and{" "}
+      <span className="text-[#8A1D4F]">Custom Web Design</span>. Visit{" "}
+      <Link
+        href="https://dev-champions.tech"
+        className="text-blue-600 underline"
+      >
+        Dev Champions
+      </Link>{" "}
+      for innovative solutions tailored to your needs!
+    </span>
+  </div>
+</div>
+
     </div>
+    
   );
 }

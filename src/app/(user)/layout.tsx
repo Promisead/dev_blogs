@@ -7,10 +7,12 @@ import { GradientBackground } from "@/components/gradient";
 import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "My - Blog",
+  title: "Dev - Blogs || Dev Champions",
   description:
     "Stay informed with product updates, company news, and insights on how to sell smarter at your company.",
 };
+
+
 export default function RootLayout({
   children,
 }: Readonly<{
