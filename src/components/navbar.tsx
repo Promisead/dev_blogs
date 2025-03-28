@@ -15,6 +15,7 @@ import Image from "next/image";
 
 export const navLinks = [
   { href: "/", label: "Home" },
+  { href: "https://jobs.dev-champions.tech", label: "Jobs" },
   { href: "https://dev-champions.tech", label: "Agency", external: true },
 ];
 

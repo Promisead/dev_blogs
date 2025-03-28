@@ -15,7 +15,7 @@ const products: ProductType[] = [
     link: [
       { name: "Home", href: "/" },
       { name: "Agency", href: "https://dev-champions.tech/" },
-      { name: "Jobs", href: "https://dev-champions.tech/jobs" },
+      { name: "Jobs", href: "https://jobs.dev-champions.tech" },
       {
         name: "Contact",
         href: "https://api.whatsapp.com/send/?phone=+2349115034504&text=Feel%20free%20to%20email%20us%20at%20info%40dev-champions.tech%20too",
