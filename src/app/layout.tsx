@@ -18,7 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
           {/* Google Analytics setup */}
-          <Script async src="https://www.googletagmanager.com/gtag/js?id=G-XBK0H6BVEY" />
+          <Script async src="https://www.googletagmanager.com/gtag/js?id=G-82J51F6LMX" />
         <Script
           id="google-analytics"
           dangerouslySetInnerHTML={{
@@ -26,7 +26,7 @@ export default function RootLayout({
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-XBK0H6BVEY');
+              gtag('config', 'G-82J51F6LMX');
             `,
           }}
         />
@@ -42,6 +42,8 @@ export default function RootLayout({
         />
         {/* <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} /> */}
+        <title>Dev Champions IT | My Blog</title>
+        <meta name="description" content="Stay informed with product updates, company news, and insights on how to sell smarter at your company." />
       </head>
       <body className="antialiased overflow-x-hidden">
         <SessionProvider>{children}</SessionProvider>
