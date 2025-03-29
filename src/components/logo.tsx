@@ -11,7 +11,7 @@ export default function Logo({ className }: LogoProps) {
     <Link href="/" title="Home">
       <div className={`flex items-center space-x-4 ${className || ""}`}>
         <Image
-          src="/images/logo/logo.png"
+          src="/images/logo/logo_web.png"
           alt="Logo"
           width={40} // Adjust width for responsive design
           height={40}
