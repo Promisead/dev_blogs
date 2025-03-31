@@ -75,7 +75,7 @@ export default async function FeaturedPosts() {
       <span className="text-[#077998]">IT Tutorials</span>, and{" "}
       <span className="text-[#8A1D4F]">Custom Web Design</span>. Visit{" "}
       <Link
-        href="https://dev-champions.tech"
+        href="https://www.dev-champions.tech"
         className="text-blue-600 underline"
       >
         Dev Champions

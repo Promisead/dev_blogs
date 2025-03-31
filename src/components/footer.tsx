@@ -14,7 +14,7 @@ const products: ProductType[] = [
     section: "Menu",
     link: [
       { name: "Home", href: "/" },
-      { name: "Agency", href: "https://dev-champions.tech/" },
+      { name: "Agency", href: "https://www.dev-champions.tech/" },
       { name: "Jobs", href: "https://jobs.dev-champions.tech" },
       {
         name: "Contact",
@@ -62,7 +62,7 @@ export default function Footer() {
             <span className="text-white text-lg font-bold px-4">
               Looking for top-notch services? Dev Champions offers Web Development, AI Solutions, Data Analytics, E-commerce Platform Development, IT Tutorials, and Custom Web Design. Visit{" "}
               <Link
-                href="https://dev-champions.tech"
+                href="https://www.dev-champions.tech"
                 className="text-orange-500 underline"
               >
                 Dev Champions

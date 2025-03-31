@@ -11,7 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
     },
     {
-      url: 'https://dev-champions.tech',
+      url: 'https://www.dev-champions.tech',
       lastModified: new Date(),
     },
     {
