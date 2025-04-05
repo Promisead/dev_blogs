@@ -47,7 +47,7 @@ const WriteComment = ({ _id }: { _id: string }) => {
             <div className="flex flex-col items-center space-y-4">
               <CheckCircle className="w-16 h-16 text-green-300" />
               <h1 className="text-3xl font-bold text-center">
-                Thank you for submitting your comment!
+                Thank you for submitting your amazing  comment!
               </h1>
               <p className="text-lg text-center">
                 Once it has been approved by our admin, it will appear below.
