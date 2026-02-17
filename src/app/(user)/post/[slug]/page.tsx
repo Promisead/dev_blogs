@@ -12,6 +12,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import React from "react";
 
+export const revalidate = 60; // Revalidate every 60 seconds
+
 const SinglePostPage = async ({
   params,
 }: {
@@ -115,6 +117,7 @@ const SinglePostPage = async ({
                                 <hr className="my-8 border-t border-gray-200" />
                               );
                             case "space":
+                              return <div className="my-8" />;
                               return <div className="my-8" />;
                             default:
                               return null;

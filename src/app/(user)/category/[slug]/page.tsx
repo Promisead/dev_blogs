@@ -1,3 +1,4 @@
+export const revalidate = 60; // Revalidate every 60 seconds
 import { Button } from "@/components/button";
 import Categories from "@/components/categories";
 import Container from "@/components/container";

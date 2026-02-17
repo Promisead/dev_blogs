@@ -4,6 +4,7 @@ import Container from "@/components/container";
 import FeaturedPosts from "@/components/featuredPosts";
 import { urlFor } from "@/sanity/lib/image";
 import { getAllPosts } from "@/sanity/queries";
+export const revalidate = 60; // Revalidate every 60 seconds
 import dayjs from "dayjs";
 import { ChevronRightIcon } from "lucide-react";
 import Image from "next/image";
