@@ -1,5 +1,6 @@
 // /src/app/api/revalidate/route.ts
 import { NextRequest, NextResponse } from 'next/server';
+import { revalidatePath } from 'next/cache';
 
 // Set this to a secret value and add it to your Vercel/Sanity webhook
 const REVALIDATE_SECRET = process.env.REVALIDATE_SECRET;
@@ -18,10 +19,14 @@ export async function GET(req: NextRequest) {
   }
 
   try {
-    // Revalidate the given path
-    await res.revalidate(path);
+    // Revalidate the given path using Next.js App Router API
+    revalidatePath(path);
+
     return NextResponse.json({ revalidated: true, path });
   } catch (err) {
-    return NextResponse.json({ message: 'Error revalidating', error: err }, { status: 500 });
+    return NextResponse.json(
+      { message: 'Error revalidating', error: String(err) },
+      { status: 500 }
+    );
   }
 }
